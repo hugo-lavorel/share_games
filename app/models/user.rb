@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :address, presence: true
   validates :email, uniqueness: true
-  validates :email, format: { with: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
+  validates :email, format: { with: /\A([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})\z/,
     message: "Not a valid email" }
 
 end
