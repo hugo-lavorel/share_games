@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <%#= cl_image_tag("home-page-banner", crop: :fill, id:"banner-image") %>
+  <div class="title text-center">
+    <h1>Game Share</h1>
+    <h3>The passion to share your passion</h3>
+    <a href="#" class="btn btn-primary">Start now !</a>
+  </div>
+</div>
+<div class="cards">
+  <div class="card" style="width: 18rem;">
+    <%= cl_image_tag("dog", class: "card-img-top", alt:"Card image cap") %>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body">
+      <p class="card-text"><strong>Easy to use</strong>. Even your dog can book a game.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <%= cl_image_tag("money-bag", class: "card-img-top", alt:"Card image cap") %>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body">
+      <p class="card-text"><strong>Money saver</strong>. Make money with your games.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <%= cl_image_tag("environment", class: "card-img-top", alt:"Card image cap") %>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body">
+      <p class="card-text"><strong>Eco-friendly</strong>. Don't buy a new game to play it only once.</p>
+    </div>
+  </div>
+</div>
