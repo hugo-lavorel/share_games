@@ -1,1 +1,3 @@
-<p>Hello World !</p>
+<% @games.each do |game| %>
+  <%= render 'shared/game-card', game: game %>
+<% end %>
