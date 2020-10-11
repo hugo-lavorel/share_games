@@ -1,0 +1,7 @@
+<%= @game.name %>
+<% if policy(@game).edit? %>
+  <%= link_to "Edit", edit_game_path(@game) %>
+<% end %>
+<% if policy(@game).destroy? %>
+  <%= link_to "Destroy", game_path(@game), method: :delete %>
+<% end %>
