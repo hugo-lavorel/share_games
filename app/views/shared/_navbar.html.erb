@@ -11,12 +11,17 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto navbar-list">
       <% if user_signed_in? %>
+        <li class="nav_item">
+          <%= link_to 'New game', new_game_path, class:'btn btn-primary' %>
+        </li>
         <li class="nav-item active">
-          <%#= link_to "Home", "#", class: "nav-link" %>
           <%= "Hello " + current_user.first_name %>
         </li>
         <li class="nav-item">
-          <%#= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= cl_image_tag("avatar", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
