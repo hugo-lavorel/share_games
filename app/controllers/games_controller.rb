@@ -21,6 +21,16 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    authorize @game
+  end
+
+  def edit
+    @game = Game.find(params[:id])
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    @game.update(game_params)
   end
 
   private
