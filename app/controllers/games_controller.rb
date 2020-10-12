@@ -13,10 +13,12 @@ class GamesController < ApplicationController
     else
       render :new
     end
+    authorize @game
   end
 
   def new
     @game = Game.new
+    authorize @game
   end
 
   def show
