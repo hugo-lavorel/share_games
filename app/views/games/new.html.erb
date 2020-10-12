@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>New game</h1>
+  <%= simple_form_for @game do |f| %>
+    <%= f.input :name, placeholder: "Game name", input_html: { class: "default-input" } %>
+    <%= f.input :description, placeholder: "Tell us your story...", input_html: { class: "default-input" } %>
+  <% end %>
+
+</div>
