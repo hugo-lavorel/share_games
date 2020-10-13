@@ -3,6 +3,7 @@
   <%= simple_form_for @game do |f| %>
     <%= f.input :name, placeholder: "Game name", input_html: { class: "default-input" } %>
     <%= f.input :description, placeholder: "Tell us your story...", input_html: { class: "default-input" } %>
+    <%= f.submit class: "primary-btn" %>
   <% end %>
 
 </div>

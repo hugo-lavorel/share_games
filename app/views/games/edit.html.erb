@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Edit your game</h1>
+  <%= simple_form_for @game do |f| %>
+    <%= f.input :name, placeholder: @game.name, input_html: { class: "default-input" } %>
+    <%= f.input :category, collection: %w(strategy role-playing adventure quizz word-game classique) %>
+    <%= f.input :player_min, collection: 1..99 %>
+    <%= f.input :player_max, collection: 1..99 %>
+    <%= f.input :condition, collection: %w(new good damaged) %>
+    <%= f.input :price_per_day, collection: 1..99 %>
+    <%= f.input :description, placeholder: @game.description, input_html: { class: "default-input" } %>
+    <%= f.submit class: "primary-btn" %>
+  <% end %>
+
+</div>

@@ -21,6 +21,10 @@ class GamePolicy < ApplicationPolicy
     record.user == user
   end
 
+  def edit?
+    update?
+  end
+
   def destroy?
     update?
   end
