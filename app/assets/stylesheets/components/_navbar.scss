@@ -1,19 +1,42 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 50%;
+  height: 50%;
+}
+
+.btn-post-game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  padding: 6px;
+  border-radius: 4px;
+  p {
+    margin: 0;
+  }
+
+  .fa-plus-square {
+    font-size: 30px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
 .navbar-list {
   align-items: center;
   li {
-    margin-right: 8px;
+    margin-right: 24px;
   }
+}
+
+.notif-bell {
+  font-size: 24px;
+  color: $blue;
 }
