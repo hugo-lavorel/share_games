@@ -2,10 +2,15 @@
   <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
     <div class="card-product-infos">
-      <h2><%= game.name %></h2>
-      <p>Category: <%= game.category %></p>
-      <p>Players: <%= game.player_min %> - <%= game.player_max %></p>
-      <p>Price per day: <%= game.price_per_day %></p>
+      <div class="card-product-infos-text">
+        <h2><%= game.name %></h2>
+        <p class="card-product-description"><%= game.description %></p>
+        <p>Players: <%= game.player_min %> - <%= game.player_max %></p>
+      </div>
+      <div class="card-product-infos-price">
+        <p><%= game.category %></p>
+        <p><%= game.price_per_day %>€/day</p>
+      </div>
     </div>
   </div>
 <% end  %>
