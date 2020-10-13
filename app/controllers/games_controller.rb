@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @games = Game.all
+    @games = Game.order('name ASC')
   end
 
   def create

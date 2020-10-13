@@ -42,6 +42,7 @@ puts 'Creating games'
                     player_min: 3,
                     player_max: 4,
                     condition: "new",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 5
                     )
   catan.user = jean
@@ -52,6 +53,7 @@ puts 'Creating games'
                     player_min: 2,
                     player_max: 4,
                     condition: "damaged",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 3
                     )
   Rummibuk.user = jean
@@ -62,6 +64,7 @@ puts 'Creating games'
                     player_min: 2,
                     player_max: 4,
                     condition: "new",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 4
                     )
   Takenoko.user = jean
@@ -72,6 +75,7 @@ puts 'Creating games'
                     player_min: 3,
                     player_max: 10,
                     condition: "good",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 10
                     )
   DonjonAndDragon.user = jean
@@ -82,6 +86,7 @@ puts 'Creating games'
                     player_min: 2,
                     player_max: 6,
                     condition: "good",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 8
                     )
   wonders.user = paul
@@ -92,6 +97,7 @@ puts 'Creating games'
                     player_min: 2,
                     player_max: 4,
                     condition: "new",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 7
                     )
   Crime.user = paul
@@ -102,6 +108,7 @@ puts 'Creating games'
                     player_min: 2,
                     player_max: 8,
                     condition: "damaged",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 2
                     )
   Uno.user = paul
