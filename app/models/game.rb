@@ -2,6 +2,8 @@ class Game < ApplicationRecord
   belongs_to :user
   has_many :reviews, through: :bookings
 
+  has_one_attached :photo
+
   validates :name, presence: true
   validates :category, presence: true
   validates :category, inclusion: { in: %w(strategy role-playing adventure quizz word-game classique),
