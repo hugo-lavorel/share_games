@@ -1,10 +1,20 @@
-<div class="container">
-  <h1>New game</h1>
-  <%= simple_form_for @game do |f| %>
-    <%= f.input :name, placeholder: "Game name", input_html: { class: "default-input" } %>
-    <%= f.input :description, placeholder: "Tell us your story...", input_html: { class: "default-input" } %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit class: "primary-btn" %>
-  <% end %>
-
+<div class="container container-new-game">
+  <div class="row col-6">
+      <h1>New game</h1>
+      <%= simple_form_for @game do |f| %>
+      <%= f.input :name, placeholder: "Game name", input_html: { class: "default-input" } %>
+      <%= f.input :description, placeholder: "Tell us your story...", input_html: { class: "default-input" } %>
+      <div class="form-player">
+        <%= f.input :category, as: :select, collection: %w[strategy role-playing adventure quizz word-game classique], input_html: { class: "default-input" } %>
+        <%= f.input :condition, as: :select, collection: %w[new good damaged], input_html: { class: "default-input" } %>
+      </div>
+      <div class="form-player">
+        <%= f.input :player_min, input_html: { class: "default-input", min: "1" } %>
+        <%= f.input :player_max, input_html: { class: "default-input", min: "1" } %>
+      </div>
+      <%= f.input :price_per_day, input_html: { class: "default-input", min: "0" } %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: "primary-btn" %>
+      <% end %>
+  </div>
 </div>
