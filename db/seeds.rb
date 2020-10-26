@@ -46,6 +46,7 @@ puts 'Creating games'
                     price_per_day: 5
                     )
   catan.user = jean
+  catan.photo.attach(io: File.open("app/assets/images/#{catan.name}.jpg"), filename: "#{catan.name}.jpg", content_type: 'image/jpg')
   catan.save!
 
   Rummibuk = Game.new(name: "Rummibuk",
@@ -57,6 +58,7 @@ puts 'Creating games'
                     price_per_day: 3
                     )
   Rummibuk.user = jean
+  Rummibuk.photo.attach(io: File.open("app/assets/images/#{Rummibuk.name}.jpg"), filename: "#{Rummibuk.name}.jpg", content_type: 'image/jpg')
   Rummibuk.save!
 
   Takenoko = Game.new(name: "Takenoko",
@@ -68,6 +70,7 @@ puts 'Creating games'
                     price_per_day: 4
                     )
   Takenoko.user = jean
+  Takenoko.photo.attach(io: File.open("app/assets/images/#{Takenoko.name}.jpg"), filename: "#{Takenoko.name}.jpg", content_type: 'image/jpg')
   Takenoko.save!
 
   DonjonAndDragon = Game.new(name: "Donjon and Dragon",
@@ -79,6 +82,7 @@ puts 'Creating games'
                     price_per_day: 10
                     )
   DonjonAndDragon.user = jean
+  DonjonAndDragon.photo.attach(io: File.open("app/assets/images/Donjon_and_Dragon.jpg"), filename: "Donjon_and_Dragon.jpg", content_type: 'image/jpg')
   DonjonAndDragon.save!
 
   wonders = Game.new(name: "Seven Wonders",
@@ -90,6 +94,7 @@ puts 'Creating games'
                     price_per_day: 8
                     )
   wonders.user = paul
+  wonders.photo.attach(io: File.open("app/assets/images/Seven_Wonders.jpg"), filename: "Seven_Wonders.jpg", content_type: 'image/jpg')
   wonders.save!
 
   Crime = Game.new(name: "Chronicles of Crime",
@@ -101,6 +106,7 @@ puts 'Creating games'
                     price_per_day: 7
                     )
   Crime.user = paul
+  Crime.photo.attach(io: File.open("app/assets/images/Chronicles_of_Crime.jpg"), filename: "Chronicles_of_Crime.jpg", content_type: 'image/jpg')
   Crime.save!
 
   Uno = Game.new(name: "Uno",
@@ -112,6 +118,7 @@ puts 'Creating games'
                     price_per_day: 2
                     )
   Uno.user = paul
+  Uno.photo.attach(io: File.open("app/assets/images/#{Uno.name}.jpg"), filename: "#{Uno.name}.jpg", content_type: 'image/jpg')
   Uno.save!
 
 puts 'End creating games'
