@@ -1,13 +1,14 @@
 // Specific CSS for your home-page
 .banner {
   width: 100%;
-  height: calc(100vh - 66px);
+  height: calc(100vh - 76px);
   position: relative;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/domaqeync/image/upload/v1602147170/home-page-banner.jpg');
   background-size: cover;
 }
 
+// Set the banner title in the middle with the right style
 .title {
     position: absolute;
     top: 50%;
@@ -17,13 +18,16 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     h1 {
       font-size: 56px;
+      margin: 0;
     }
     h3 {
       font-size: 24px;
       opacity: 0.7;
+      margin-bottom: 16px;
     }
 }
 
+// Display the list of cards correctly
 .cards {
   display: flex;
   justify-content: space-around;
@@ -31,6 +35,31 @@
   margin-bottom: 24px;
 }
 
+.card {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 .card-img-top {
   padding: 20px;
+}
+
+
+// Style of the search bar on the home page
+.navbar-search-home .simple_form {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.navbar-search-home .form-group {
+  margin: 0;
+}
+
+#search_query {
+  border-radius: 8px;
+}
+
+#btn-search {
+  border-radius: 8px;
 }
