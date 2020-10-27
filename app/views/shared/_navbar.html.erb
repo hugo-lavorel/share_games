@@ -14,11 +14,11 @@
       <ul class="navbar-nav mr-auto navbar-list">
         <% if user_signed_in? %>
         <li>
-          <%= link_to new_game_path do %>
-          <div class="btn btn-primary btn-post-game">
+          <%= link_to new_game_path, class:"btn btn-primary btn-post-game" do %>
+          <!-- <div class="btn btn-primary btn-post-game"> -->
             <i class="far fa-plus-square"></i>
             <p>Post a game</p>
-          </div>
+          <!-- </div> -->
           <% end %>
         </li>
         <li class="notif-bell">

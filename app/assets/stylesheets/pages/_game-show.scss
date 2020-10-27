@@ -1,0 +1,93 @@
+.container-game-details {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  gap: 32px;
+}
+
+.game-details {
+  width: 75%;
+}
+
+.right-section {
+  position: sticky;
+  top: 108px;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.game-owner {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+}
+
+.game-details-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.game-details-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  p {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+
+.game-details-image {
+  height: 300px;
+  border-radius: 8px;
+}
+
+.game-details-card-image {
+  margin: 16px;
+}
+
+.game-details-card-text p {
+  text-align: justify;
+}
+
+.game-details-card-text-title {
+  font-weight: bold;
+}
+
+.game-details-card-action {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-game-action {
+  border-radius: 8px;
+}
+
+.game-owner-details-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.game-owner-avatar {
+  width: 64px;
+  border-radius: 50%;
+}
+
+.btn-book-game {
+  border-radius: 8px;
+}
