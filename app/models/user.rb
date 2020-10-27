@@ -14,4 +14,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :email, format: { with: /\A([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})\z/,
                               message: "Not a valid email" }
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
