@@ -34,6 +34,11 @@ class GamesController < ApplicationController
   def update
     @game = Game.find(params[:id])
     @game.update(game_params)
+    if @game.save
+      redirect_to game_path(@game)
+    else
+      redirect_to edit_game_path(@game)
+    end
     authorize @game
   end
 

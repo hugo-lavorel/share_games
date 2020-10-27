@@ -1,7 +1,55 @@
-<%= @game.name %>
-<% if policy(@game).edit? %>
-  <%= link_to "Edit", edit_game_path(@game) %>
-<% end %>
-<% if policy(@game).destroy? %>
-  <%= link_to "Destroy", game_path(@game), method: :delete %>
-<% end %>
+<div class="container container-game-details">
+  <div class="game-details">
+    <div class="game-details-card">
+      <div class="game-details-card-header">
+        <h1><%= @game.name %></h1>
+        <p><span class="game-details-card-text-title">Price:</span> <%= @game.price_per_day %>€/day</p>
+      </div>
+      <div class="game-details-card-image">
+        <% if @game.photo.attached? %>
+          <%= cl_image_tag @game.photo.key, class:"game-details-image",crop: :fill %>
+        <% else %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <% end %>
+      </div>
+      <div class="game-details-card-text">
+        <p><span class="game-details-card-text-title">Category:</span> <%= @game.category %></p>
+        <p><span class="game-details-card-text-title">Condition:</span> <%= @game.condition %></p>
+        <p><span class="game-details-card-text-title">Description:</span> <%= @game.description %></p>
+        <p><span class="game-details-card-text-title">Player:</span> <%= @game.player_min %> - <%= @game.player_max %></p>
+      </div>
+      <div class="game-details-card-action">
+        <% if policy(@game).edit? %>
+          <%= link_to "Edit", edit_game_path(@game), class:"btn btn-primary btn-game-action" %>
+        <% end %>
+        <% if policy(@game).destroy? %>
+          <%= link_to "Destroy", game_path(@game), method: :delete, class:"btn btn-primary btn-game-action" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="right-section">
+    <div class="game-owner">
+      <div class="game-owner-details">
+        <div class="game-owner-details-info">
+          <div>
+            <%= @game.user.first_name %> <%= @game.user.last_name %>
+          </div>
+          <div>
+          <% if @game.user.avatar.attached? %>
+            <%= cl_image_tag @game.user.avatar.key, class:"game-owner-avatar", crop: :fill %>
+          <% else %>
+            <%= cl_image_tag "avatar", class:"game-owner-avatar", crop: :fill %>
+          <% end %>
+          </div>
+        </div>
+        <div class="game-owner-details-text">
+          <p>Hello World !</p>
+        </div>
+      </div>
+    </div>
+    <% if current_user != @game.user %>
+      <%= link_to "Envoyer un message", "#", class:"btn btn-primary btn-book-game" %>
+    <% end %>
+  </div>
+</div>
