@@ -3,6 +3,13 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.order('name ASC')
+
+    @markers = @games.map do |game|
+      {
+        lat: game.user.latitude,
+        lng: game.user.longitude
+      }
+    end
   end
 
   def create
