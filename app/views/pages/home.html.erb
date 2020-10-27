@@ -1,13 +1,15 @@
 <div class="banner">
-  <div class="title text-center">
-    <h1>Game Share</h1>
-    <h3>Trouves le jeu que tu veux proche de chez toi</h3>
+  <div class="title-home">
+    <div class="text-center">
+      <h1>Game Share</h1>
+      <h3>Trouves le jeu que tu veux proche de chez toi</h3>
+    </div>
 
     <div class="navbar-search-home">
       <%#= simple_form_for :search, url: search_path, method: :get  do |f| %>
       <%= simple_form_for :search,  method: :get  do |f| %>
-        <%= f.input :query, placeholder: "Jeux", label: false %>
-        <%= f.input :query, placeholder: "Ville", label: false %>
+        <%= f.input :game, placeholder: "Jeux", label: false %>
+        <%= f.input :location, placeholder: "Ville", label: false %>
         <%= f.submit "Rechercher", id:"btn-search", class: "btn btn-primary"%>
       <% end %>
     </div>
