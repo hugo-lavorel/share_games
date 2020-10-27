@@ -15,7 +15,7 @@ jean = User.new(
             email:"jean.martin@test.com",
             first_name:"Jean",
             last_name:"Martin",
-            address:"56 avenue Victor Hugo, 75001 PARIS",
+            address:"104 rue La Boétie, PARIS",
             phone_number: "01 98 29 22 76",
             bio: "Joueur du dimanche, j'adore passer mes après-mmidi à jouer en famille ou avec des amis. Ma collection de jeux n'est pas très grande mais je souhaite en faire profiter un maximum de personnes !",
             password: "mdpmdp"
@@ -24,16 +24,52 @@ jean = User.new(
 jean.save!
 
 paul = User.new(
-            email:"Paul.Dupond@test.com",
+            email:"paul.dupond@test.com",
             first_name:"Paul",
             last_name:"Dupond",
-            address:"36 quai de la rapé, 92120 MONTROUGE",
+            address:"108 Faubourg Saint Honoré, PARIS",
             phone_number: "01 29 42 49 01",
             bio: "Grand collectionneur de jeux, je suis toujours à la recherche de la perle rare ! Je mets à la location les jeux dont je ne me sert plus afin que la communauté puisse en profiter.",
             password: "mdpmdp"
             )
 
 paul.save!
+
+Arthur = User.new(
+            email:"arthur.rouge@test.com",
+            first_name:"Arthur",
+            last_name:"Rouge",
+            address:"28 Place de la Madeleine, PARIS",
+            phone_number: "01 28 42 09 20",
+            bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo tellus non gravida dictum. Nam lacinia quis leo id pharetra. In mattis dolor lectus. Proin cursus tellus sapien, convallis sagittis tortor volutpat congue. Maecenas quis orci pharetra eros vehicula rutrum.",
+            password: "mdpmdp"
+            )
+
+Arthur.save!
+
+Benoit = User.new(
+            email:"benoit.alre@test.com",
+            first_name:"Benoit",
+            last_name:"Alre",
+            address:"12 rue du Copreaux, PARIS",
+            phone_number: "01 37 81 91 38",
+            bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo tellus non gravida dictum. Nam lacinia quis leo id pharetra. In mattis dolor lectus. Proin cursus tellus sapien, convallis sagittis tortor volutpat congue. Maecenas quis orci pharetra eros vehicula rutrum.",
+            password: "mdpmdp"
+            )
+
+Benoit.save!
+
+Camille = User.new(
+            email:"camille.legrand@test.com",
+            first_name:"Camille",
+            last_name:"Legrand",
+            address:"32 rue de Domrémy, PARIS",
+            phone_number: "01 71 68 12 38",
+            bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo tellus non gravida dictum. Nam lacinia quis leo id pharetra. In mattis dolor lectus. Proin cursus tellus sapien, convallis sagittis tortor volutpat congue. Maecenas quis orci pharetra eros vehicula rutrum.",
+            password: "mdpmdp"
+            )
+
+Camille.save!
 
 puts 'End creating user'
 
@@ -59,7 +95,7 @@ puts 'Creating games'
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 3
                     )
-  Rummibuk.user = jean
+  Rummibuk.user = Benoit
   Rummibuk.photo.attach(io: File.open("app/assets/images/#{Rummibuk.name}.jpg"), filename: "#{Rummibuk.name}.jpg", content_type: 'image/jpg')
   Rummibuk.save!
 
@@ -83,7 +119,7 @@ puts 'Creating games'
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 10
                     )
-  DonjonAndDragon.user = jean
+  DonjonAndDragon.user = Arthur
   DonjonAndDragon.photo.attach(io: File.open("app/assets/images/Donjon_and_Dragon.jpg"), filename: "Donjon_and_Dragon.jpg", content_type: 'image/jpg')
   DonjonAndDragon.save!
 
@@ -107,7 +143,7 @@ puts 'Creating games'
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 7
                     )
-  Crime.user = paul
+  Crime.user = Camille
   Crime.photo.attach(io: File.open("app/assets/images/Chronicles_of_Crime.jpg"), filename: "Chronicles_of_Crime.jpg", content_type: 'image/jpg')
   Crime.save!
 
@@ -119,7 +155,7 @@ puts 'Creating games'
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, odio ac viverra consequat, purus nibh mattis sem, vitae vehicula massa sapien vitae mi. Nam convallis mollis felis sed aliquam. Phasellus rutrum sem blandit tortor pellentesque, nec tempor magna ullamcorper. In id consectetur nunc, non mollis neque. Aliquam scelerisque egestas eros a ultricies. Duis porttitor consequat mattis. Integer efficitur ultrices dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque mi.",
                     price_per_day: 2
                     )
-  Uno.user = paul
+  Uno.user = Arthur
   Uno.photo.attach(io: File.open("app/assets/images/#{Uno.name}.jpg"), filename: "#{Uno.name}.jpg", content_type: 'image/jpg')
   Uno.save!
 
