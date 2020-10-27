@@ -44,12 +44,12 @@
           </div>
         </div>
         <div class="game-owner-details-text">
-          <p>Hello World !</p>
+          <p><span class="game-details-card-text-title">Bio:</span> <%= @game.user.bio %></p>
         </div>
       </div>
     </div>
     <% if current_user != @game.user %>
-      <%= link_to "Envoyer un message", "#", class:"btn btn-primary btn-book-game" %>
+      <%= link_to "Envoyer un message à #{@game.user.first_name}", "#", class:"btn btn-primary btn-book-game" %>
     <% end %>
   </div>
 </div>
