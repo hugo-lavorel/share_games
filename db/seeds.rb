@@ -17,6 +17,7 @@ jean = User.new(
             last_name:"Martin",
             address:"56 avenue Victor Hugo, 75001 PARIS",
             phone_number: "01 98 29 22 76",
+            bio: "Joueur du dimanche, j'adore passer mes après-mmidi à jouer en famille ou avec des amis. Ma collection de jeux n'est pas très grande mais je souhaite en faire profiter un maximum de personnes !",
             password: "mdpmdp"
             )
 
@@ -28,6 +29,7 @@ paul = User.new(
             last_name:"Dupond",
             address:"36 quai de la rapé, 92120 MONTROUGE",
             phone_number: "01 29 42 49 01",
+            bio: "Grand collectionneur de jeux, je suis toujours à la recherche de la perle rare ! Je mets à la location les jeux dont je ne me sert plus afin que la communauté puisse en profiter.",
             password: "mdpmdp"
             )
 
