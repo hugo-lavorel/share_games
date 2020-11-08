@@ -2,7 +2,10 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @games = Game.order('name ASC')
+    @games = Game.all
+
+    @games = @games.search_by_name(params[:name]) if params[:name].present?
+    # @games = @games.search_by_location(params[:user.address]) if params[:user.address].present?
 
     @markers = @games.map do |game|
       {
@@ -59,6 +62,7 @@ class GamesController < ApplicationController
                                  :player_max,
                                  :condition,
                                  :price_per_day,
-                                 :photo)
+                                 :photo,
+                                 :user.address)
   end
 end

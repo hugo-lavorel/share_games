@@ -7,8 +7,8 @@
 
     <div class="navbar-search-home">
       <%#= simple_form_for :search, url: search_path, method: :get  do |f| %>
-      <%= simple_form_for :search,  method: :get  do |f| %>
-        <%= f.input :game, placeholder: "Jeux", label: false %>
+      <%= simple_form_for "", url: games_path, html: {class: "con-simple-form"}, method: :get  do |f| %>
+        <%= f.input :name, placeholder: "Jeux", label: false %>
         <%= f.input :location, placeholder: "Ville", label: false %>
         <%= f.submit "Rechercher", id:"btn-search", class: "btn btn-primary"%>
       <% end %>
