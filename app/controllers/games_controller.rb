@@ -66,7 +66,6 @@ class GamesController < ApplicationController
                                  :player_max,
                                  :condition,
                                  :price_per_day,
-                                 :photo,
-                                 :user.address)
+                                 :photo)
   end
 end
