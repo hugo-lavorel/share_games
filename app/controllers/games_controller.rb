@@ -3,9 +3,13 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-
     @games = @games.search_by_name(params[:name]) if params[:name].present?
-    # @games = @games.search_by_location(params[:user.address]) if params[:user.address].present?
+
+    if params[:location].present?
+      @users = User.near(Geocoder.search(params[:location]).first.coordinates, 10)
+      @users_id = @users.map(&:id)
+      @games = @games.select { |game| @users_id.include?(game.user_id) }
+    end
 
     @markers = @games.map do |game|
       {
