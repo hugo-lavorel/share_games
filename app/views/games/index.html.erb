@@ -1,8 +1,13 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <% @games.each do |game| %>
-        <%= render 'shared/game-card', game: game %>
+      <% if @games.size > 0%>
+        <% @games.each do |game| %>
+          <%= render 'shared/game-card', game: game %>
+        <% end %>
+      <% else %>
+        <p>Sorry..</p>
+        <p>There is no results for this game and/or location</p>
       <% end %>
     </div>
     <div class="col-6">
