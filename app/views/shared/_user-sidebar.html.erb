@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="user-profile-side-bar-action">
-    <%= link_to 'Edit my profile', edit_user_path(current_user), class:'btn btn-primary btn-profile-action'  %>
+    <%= link_to 'Edit my profile', edit_user_path(@user), class:'btn btn-primary btn-profile-action'  %>
     <%= link_to 'Change my password', edit_user_registration_path, class:'btn btn-primary btn-profile-action'  %>
     <%= link_to 'Delete my profile', '#', class:'btn btn-danger btn-profile-action'  %>
   </div>

@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:game).permit(:first_name,
+    params.require(:user).permit(:first_name,
                                  :last_name,
                                  :address,
                                  :phone_number,
