@@ -1,0 +1,19 @@
+<div class="user-profile-side-bar">
+  <div class="user-profile-side-bar-info">
+    <div class="user-profile-side-bar-picture">
+      <% if @user.avatar.attached? %>
+        <%= cl_image_tag @user.avatar.key, class:"game-owner-avatar", crop: :fill %>
+      <% else %>
+        <%= cl_image_tag "avatar", class:"game-owner-avatar", crop: :fill %>
+      <% end %>
+    </div>
+    <div class="user-profile-side-bar-details">
+      <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+    </div>
+  </div>
+  <div class="user-profile-side-bar-action">
+    <%= link_to 'Edit my profile', '#', class:'btn btn-primary btn-profile-action'  %>
+    <%= link_to 'Change my password', '#', class:'btn btn-primary btn-profile-action'  %>
+    <%= link_to 'Delete my profile', '#', class:'btn btn-danger btn-profile-action'  %>
+  </div>
+</div>

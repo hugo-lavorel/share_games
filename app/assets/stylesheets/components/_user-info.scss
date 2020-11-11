@@ -1,0 +1,12 @@
+.user-profile-info {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.user-profile-info-title {
+  font-weight: bold;
+}

@@ -27,6 +27,7 @@ class UsersController < ApplicationController
                                  :last_name,
                                  :address,
                                  :phone_number,
+                                 :email,
                                  :bio)
   end
 end

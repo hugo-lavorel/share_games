@@ -1,0 +1,26 @@
+.user-profile-side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile-side-bar-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile-side-bar-action {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 8px;
+}
+
+.btn-profile-action {
+  border-radius: 8px;
+}
