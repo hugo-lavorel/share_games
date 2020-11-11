@@ -2,7 +2,7 @@
   <div class="user-profile-side-bar-info">
     <div class="user-profile-side-bar-picture">
       <% if @user.avatar.attached? %>
-        <%= cl_image_tag @user.avatar.key, class:"game-owner-avatar", crop: :fill %>
+        <%= cl_image_tag @user.avatar.key, class:"avatar-square", crop: :fill %>
       <% else %>
         <%= cl_image_tag "avatar", class:"game-owner-avatar", crop: :fill %>
       <% end %>
