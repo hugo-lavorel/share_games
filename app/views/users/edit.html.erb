@@ -1,0 +1,11 @@
+<div class="container" id="user-edit-container">
+  <h1>Edit your profile</h1>
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :first_name, placeholder: @user.first_name, required: true %>
+    <%= f.input :last_name, placeholder: @user.last_name, required: true %>
+    <%= f.input :address, placeholder: @user.address, required: true %>
+    <%= f.input :phone_number, placeholder: @user.phone_number %>
+    <%= f.input :bio, placeholder: @user.bio %>
+    <%= f.submit class: "primary-btn" %>
+  <% end %>
+</div>
