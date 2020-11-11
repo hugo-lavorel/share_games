@@ -8,6 +8,15 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+.user-profile-side-bar-picture {
+  margin-bottom: 16px;
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+  }
+}
+
 .user-profile-side-bar-info {
   display: flex;
   flex-direction: column;
