@@ -56,6 +56,11 @@ class GamesController < ApplicationController
     authorize @game
   end
 
+  def list_owned
+    @owned_games = Game.where(user_id: current_user.id)
+    authorize @owned_games
+  end
+
   private
 
   def game_params

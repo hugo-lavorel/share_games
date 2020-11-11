@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <% if @owned_games.size > 0 %>
+        <% @owned_games.each do |game| %>
+          <%= render 'shared/game-card', game: game %>
+        <% end %>
+      <% else %>
+        <p>Sorry..</p>
+        <p>There you don't have any games</p>
+      <% end %>
+    </div>
+  </div>
+</div>

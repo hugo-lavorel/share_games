@@ -28,4 +28,8 @@ class GamePolicy < ApplicationPolicy
   def destroy?
     update?
   end
+
+  def list_owned?
+    true
+  end
 end
