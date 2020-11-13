@@ -1,6 +1,7 @@
 class Game < ApplicationRecord
   belongs_to :user
-  has_many :reviews, through: :bookings
+  has_many :users, through: :reservations
+  has_many :reservations
 
   has_one_attached :photo
 
@@ -21,4 +22,20 @@ class Game < ApplicationRecord
                   using: {
                     tsearch: { prefix: true }
                   }
+
+  def self.available_on?(start_date, end_date)
+    select { |game| game.available?(start_date, end_date) }
+  end
+
+  def available?(start_date, end_date)
+    reservations.each do |reservation|
+      if (start_date >= reservation.start_date &&
+        start_date <= reservation.end_date ||
+        end_date >= reservation.start_date && end_date <= reservation.end_date)
+        return false
+      else
+        return true
+      end
+    end
+  end
 end

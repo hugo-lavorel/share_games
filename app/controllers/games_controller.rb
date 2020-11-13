@@ -3,7 +3,14 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+
     @games = @games.search_by_name(params[:name]) if params[:name].present?
+
+    if params['start_date'].present?
+      @start_date = params['start_date'].split('to')[0].strip
+      @end_date = params['start_date'].split('to')[1].strip
+      @games = @games.available_on?(DateTime.parse(@start_date), DateTime.parse(@end_date))
+    end
 
     if params[:location].present?
       @users = User.near(Geocoder.search(params[:location]).first.coordinates, 10)
